@@ -55,8 +55,6 @@ df = pd.read_csv(f'{mypath}datasets\\pokemon_data.csv')
 
 ## by multiple conditions
 # d=df.loc[(df['Type 1'] == 'Grass') | (df['Type 1'] == 'Fire')][['Type 1', 'Name','Attack']]
-# d.to_csv('mynewpokemon_data.csv')
-
 
 ## by specific string
 # # d=df.loc[~df['Name'].str.contains('Mega')]
@@ -76,8 +74,10 @@ df = pd.read_csv(f'{mypath}datasets\\pokemon_data.csv')
 #### DELETING COLUMN ####
 # new_df = df.drop(columns=['Total'])
 
-#### AGGREGATING DATA ####
+#### SAVING DATA ####
+# d.to_csv('modified_pokemon.csv')
 
+#### AGGREGATING DATA ####
 # gb=df.groupby(['Type 1']).mean(numeric_only=True)
 # print(gb)
 # gb=df.groupby(['Type 1']).sum(numeric_only=True)
